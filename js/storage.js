@@ -83,6 +83,24 @@ const Storage = (() => {
     });
   }
 
+  const DEFAULT_DATA_URL = 'knowledge_base_backup_2026-01-31.json';
+
+  async function loadDefaults() {
+    if (getBooks().length === 0 && getMindMaps().length === 0) {
+      try {
+        const res = await fetch(DEFAULT_DATA_URL);
+        const data = await res.json();
+        if (data.books) saveBooks(data.books);
+        if (data.mindmaps) saveMindMaps(data.mindmaps);
+        return true;
+      } catch (err) {
+        console.warn('Could not load default data:', err);
+        return false;
+      }
+    }
+    return false;
+  }
+
   function generateId() {
     return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
   }
@@ -90,6 +108,6 @@ const Storage = (() => {
   return {
     getBooks, saveBooks, getBook, saveBook, deleteBook,
     getMindMaps, saveMindMaps, getMindMap, saveMindMap, deleteMindMap,
-    exportData, importData, generateId
+    exportData, importData, generateId, loadDefaults
   };
 })();

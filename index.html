@@ -24,7 +24,7 @@
   <script src="js/books.js"></script>
   <script src="js/mindmap.js"></script>
   <script>
-    Books.renderDashboard();
+    Storage.loadDefaults().then(() => Books.renderDashboard());
   </script>
 </body>
 </html>

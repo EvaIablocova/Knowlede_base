@@ -1,0 +1,80 @@
+{
+  "books": [
+    {
+      "id": "ml2d4lfw0lgevc",
+      "title": "A Little History of Economics",
+      "author": "Niall Kishtainy",
+      "cover_color": "#FF6B6B",
+      "created_at": "2026-01-31T13:43:40.940Z",
+      "highlights": [
+        {
+          "id": "ml2d6ru8oihk3r",
+          "text": "What's the cost of a choice?\nIt's what you give up",
+          "chapter": "",
+          "tags": [],
+          "color": "#FF6B6B"
+        }
+      ]
+    }
+  ],
+  "mindmaps": [
+    {
+      "id": "ml2d6vunshnjco",
+      "bookId": "ml2d4lfw0lgevc",
+      "title": "Mind Map: A Little History of Economics",
+      "created_at": "2026-01-31T13:45:27.743Z",
+      "outline": "A Little History of Economics\n\tWhat's the cost of a choice?\nIt's what you give up\n",
+      "root": {
+        "text": "A Little History of Economics",
+        "color": "#FF6B6B",
+        "children": [
+          {
+            "text": "What's the cost of a choice?",
+            "color": "#4ECDC4",
+            "children": []
+          },
+          {
+            "text": "It's what you give up",
+            "color": "#45B7D1",
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "ml2d7yuqekmorz",
+      "bookId": null,
+      "title": "New Mind Map",
+      "created_at": "2026-01-31T13:46:18.290Z",
+      "outline": "Central Topic\n\tBranch 1\n\t\tSub-topic\n\tBranch 2\n\tBranch 3",
+      "root": {
+        "text": "Central Topic",
+        "color": "#FF6B6B",
+        "children": [
+          {
+            "text": "Branch 1",
+            "color": "#4ECDC4",
+            "children": [
+              {
+                "text": "Sub-topic",
+                "color": "#45B7D1",
+                "children": []
+              }
+            ]
+          },
+          {
+            "text": "Branch 2",
+            "color": "#96CEB4",
+            "children": []
+          },
+          {
+            "text": "Branch 3",
+            "color": "#FFEAA7",
+            "children": []
+          }
+        ]
+      }
+    }
+  ],
+  "exported_at": "2026-01-31T13:58:42.990Z"
+}
