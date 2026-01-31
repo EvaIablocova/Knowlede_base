@@ -83,22 +83,20 @@ const Storage = (() => {
     });
   }
 
-  const DEFAULT_DATA_URL = 'knowledge_base_backup_2026-01-31.json';
+  const GITHUB_DATA_URL =
+    'https://raw.githubusercontent.com/EvaIablocova/Knowlede_base/main/knowledge_base_backup_2026-01-31.json';
 
   async function loadDefaults() {
-    if (getBooks().length === 0 && getMindMaps().length === 0) {
-      try {
-        const res = await fetch(DEFAULT_DATA_URL);
-        const data = await res.json();
-        if (data.books) saveBooks(data.books);
-        if (data.mindmaps) saveMindMaps(data.mindmaps);
-        return true;
-      } catch (err) {
-        console.warn('Could not load default data:', err);
-        return false;
-      }
+    try {
+      const res = await fetch(GITHUB_DATA_URL, { cache: 'no-store' });
+      const data = await res.json();
+      if (data.books) saveBooks(data.books);
+      if (data.mindmaps) saveMindMaps(data.mindmaps);
+      return true;
+    } catch (err) {
+      console.warn('Could not load data from GitHub:', err);
+      return false;
     }
-    return false;
   }
 
   function generateId() {
