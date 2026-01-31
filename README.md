@@ -1,6 +1,6 @@
 # Knowledge Base — Book Notes & Mind Maps
 
-A static web app for collecting book highlights and creating mind maps. Hosted on Vercel.
+A static web app for collecting book highlights and creating mind maps. Hosted on Vercel: https://evasknowledebase.vercel.app/.
 
 ## Features
 
